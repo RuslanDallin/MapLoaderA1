@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp
+fstream
+-
+iostream
+-
+cstdlib
+-
+sstream
+-
+iostream
+-
+sstream
+-
+vector
+-
+
