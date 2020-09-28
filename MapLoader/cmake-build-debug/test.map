@@ -4,6 +4,7 @@ map solar_map.gif
 crd solar.cards
 
 [continents]
+;sasas
 Mercury 6 yellow
 Venus 8 yellow
 Earth 10 yellow
@@ -14,3 +15,8 @@ Saturn 8 yellow
 Uranus 6 yellow
 Neptune 6 yellow
 Pluto 2 yellow
+
+[files]
+pic solar_pic.jpg
+map solar_map.gif
+crd solar.cards
