@@ -11,8 +11,9 @@ class Continent{
 public:
     Continent(int idPar, string namePar, int sizePar, string colorPar);
     static vector<Continent> extractContinents(const vector<string> &vParm);
+    friend std::ostream& operator<<(std::ostream &strm, const Continent &a);
 
-public:
+private:
     int id;
     std::string name;
     int size;
