@@ -77,30 +77,45 @@ include CMakeFiles/MapLoader.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/MapLoader.dir/flags.make
 
-CMakeFiles/MapLoader.dir/main.cpp.o: CMakeFiles/MapLoader.dir/flags.make
-CMakeFiles/MapLoader.dir/main.cpp.o: ../main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MapLoader.dir/main.cpp.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MapLoader.dir/main.cpp.o -c /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp
+CMakeFiles/MapLoader.dir/MapLoader.cpp.o: CMakeFiles/MapLoader.dir/flags.make
+CMakeFiles/MapLoader.dir/MapLoader.cpp.o: ../MapLoader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/MapLoader.dir/MapLoader.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MapLoader.dir/MapLoader.cpp.o -c /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp
 
-CMakeFiles/MapLoader.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapLoader.dir/main.cpp.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp > CMakeFiles/MapLoader.dir/main.cpp.i
+CMakeFiles/MapLoader.dir/MapLoader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapLoader.dir/MapLoader.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp > CMakeFiles/MapLoader.dir/MapLoader.cpp.i
 
-CMakeFiles/MapLoader.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapLoader.dir/main.cpp.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp -o CMakeFiles/MapLoader.dir/main.cpp.s
+CMakeFiles/MapLoader.dir/MapLoader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapLoader.dir/MapLoader.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp -o CMakeFiles/MapLoader.dir/MapLoader.cpp.s
+
+CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o: CMakeFiles/MapLoader.dir/flags.make
+CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o: ../MapLoaderDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o -c /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp
+
+CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp > CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.i
+
+CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp -o CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.s
 
 # Object files for target MapLoader
 MapLoader_OBJECTS = \
-"CMakeFiles/MapLoader.dir/main.cpp.o"
+"CMakeFiles/MapLoader.dir/MapLoader.cpp.o" \
+"CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o"
 
 # External object files for target MapLoader
 MapLoader_EXTERNAL_OBJECTS =
 
-MapLoader: CMakeFiles/MapLoader.dir/main.cpp.o
+MapLoader: CMakeFiles/MapLoader.dir/MapLoader.cpp.o
+MapLoader: CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o
 MapLoader: CMakeFiles/MapLoader.dir/build.make
 MapLoader: CMakeFiles/MapLoader.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable MapLoader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable MapLoader"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/MapLoader.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

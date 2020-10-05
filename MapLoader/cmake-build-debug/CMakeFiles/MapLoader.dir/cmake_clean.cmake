@@ -1,5 +1,6 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/MapLoader.dir/main.cpp.o"
+  "CMakeFiles/MapLoader.dir/MapLoader.cpp.o"
+  "CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o"
   "MapLoader"
   "MapLoader.pdb"
 )

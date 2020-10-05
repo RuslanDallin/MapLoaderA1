@@ -94,12 +94,12 @@ clean: CMakeFiles/MapLoader.dir/clean
 CMakeFiles/MapLoader.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target MapLoader"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles --progress-num=1,2,3 "Built target MapLoader"
 .PHONY : CMakeFiles/MapLoader.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/MapLoader.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles 3
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/MapLoader.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/MapLoader.dir/rule

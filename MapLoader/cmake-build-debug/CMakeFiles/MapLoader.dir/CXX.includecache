@@ -6,12 +6,30 @@
 
 #IncludeRegexTransform: 
 
-/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp
 fstream
 -
 iostream
 -
 cstdlib
+-
+sstream
+-
+vector
+-
+MapLoader.h
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.h
+
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.h
+string
+-
+
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp
+MapLoader.h
+/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.h
+iostream
+-
+fstream
 -
 sstream
 -

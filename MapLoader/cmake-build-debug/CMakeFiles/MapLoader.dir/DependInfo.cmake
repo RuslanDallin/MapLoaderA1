@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp" "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles/MapLoader.dir/main.cpp.o"
+  "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp" "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles/MapLoader.dir/MapLoader.cpp.o"
+  "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp" "/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/cmake-build-debug/CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "AppleClang")
 

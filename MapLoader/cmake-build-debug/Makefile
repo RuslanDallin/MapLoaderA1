@@ -143,32 +143,59 @@ MapLoader/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/build
 .PHONY : MapLoader/fast
 
-main.o: main.cpp.o
+MapLoader.o: MapLoader.cpp.o
 
-.PHONY : main.o
+.PHONY : MapLoader.o
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/main.cpp.o
-.PHONY : main.cpp.o
+MapLoader.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoader.cpp.o
+.PHONY : MapLoader.cpp.o
 
-main.i: main.cpp.i
+MapLoader.i: MapLoader.cpp.i
 
-.PHONY : main.i
+.PHONY : MapLoader.i
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/main.cpp.i
-.PHONY : main.cpp.i
+MapLoader.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoader.cpp.i
+.PHONY : MapLoader.cpp.i
 
-main.s: main.cpp.s
+MapLoader.s: MapLoader.cpp.s
 
-.PHONY : main.s
+.PHONY : MapLoader.s
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/main.cpp.s
-.PHONY : main.cpp.s
+MapLoader.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoader.cpp.s
+.PHONY : MapLoader.cpp.s
+
+MapLoaderDriver.o: MapLoaderDriver.cpp.o
+
+.PHONY : MapLoaderDriver.o
+
+# target to build an object file
+MapLoaderDriver.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.o
+.PHONY : MapLoaderDriver.cpp.o
+
+MapLoaderDriver.i: MapLoaderDriver.cpp.i
+
+.PHONY : MapLoaderDriver.i
+
+# target to preprocess a source file
+MapLoaderDriver.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.i
+.PHONY : MapLoaderDriver.cpp.i
+
+MapLoaderDriver.s: MapLoaderDriver.cpp.s
+
+.PHONY : MapLoaderDriver.s
+
+# target to generate assembly for a file
+MapLoaderDriver.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/MapLoader.dir/build.make CMakeFiles/MapLoader.dir/MapLoaderDriver.cpp.s
+.PHONY : MapLoaderDriver.cpp.s
 
 # Help Target
 help:
@@ -179,9 +206,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... MapLoader"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... MapLoader.o"
+	@echo "... MapLoader.i"
+	@echo "... MapLoader.s"
+	@echo "... MapLoaderDriver.o"
+	@echo "... MapLoaderDriver.i"
+	@echo "... MapLoaderDriver.s"
 .PHONY : help
 
 

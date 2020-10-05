@@ -80,7 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/main.cpp">
+		<Unit filename="/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.cpp">
+			<Option target="MapLoader"/>
+		</Unit>
+		<Unit filename="/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoader.h">
+			<Option target="MapLoader"/>
+		</Unit>
+		<Unit filename="/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/MapLoaderDriver.cpp">
 			<Option target="MapLoader"/>
 		</Unit>
 		<Unit filename="/Users/ruslandallin/Documents/Concordia/COMP345/MapLoaderA1/MapLoader/CMakeLists.txt">

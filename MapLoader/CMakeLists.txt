@@ -3,4 +3,4 @@ project(MapLoader)
 
 set(CMAKE_CXX_STANDARD 14)
 
-add_executable(MapLoader main.cpp)
+add_executable(MapLoader MapLoader.cpp MapLoader.h MapLoaderDriver.cpp)
