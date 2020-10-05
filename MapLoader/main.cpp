@@ -2,8 +2,6 @@
 #include <iostream>
 #include <cstdlib>
 #include <sstream>
-#include <iostream>
-#include <sstream>
 #include <vector>
 using namespace std;
 
@@ -12,6 +10,8 @@ public:
     Continent(int idPar, string namePar, int sizePar, string colorPar);
     static vector<Continent> extractContinents(const vector<string> &vParm);
     friend std::ostream& operator<<(std::ostream &strm, const Continent &a);
+    static void addContinents(const vector<Continent> &v);
+
 
 private:
     int id;
@@ -24,6 +24,11 @@ private:
 class Territory {
 public:
     Territory(int id, std::string name, int contId, int x, int y);
+    static vector<Territory> extractTerritories(const vector<string> &v);
+    friend std::ostream& operator<<(std::ostream &strm, const Territory &a);
+    static void addTerritories(const vector<Territory> &v);
+    static void addBorders(const vector<string> &v, const vector<Territory> &vectorTerr);
+
 private:
     int id;
     std::string name;
@@ -47,8 +52,16 @@ Continent::Continent(int idPar, string namePar, int sizePar, string colorPar){
     color = colorPar;
 }
 
+Territory::Territory(int idPar, std::string namePar, int contIdPar, int xPar, int yPar) {
+    id = idPar;
+    name = namePar;
+    contId = contIdPar;
+    x = xPar;
+    y = yPar;
+}
+
 vector<Continent> Continent::extractContinents(const vector<string> &v) {
-    cout << "extraction continents\n";
+    cout << "\nextraction continents\n";
     vector<Continent> continents;
     bool flag;
     string first;
@@ -84,8 +97,99 @@ vector<Continent> Continent::extractContinents(const vector<string> &v) {
     return continents;
 }
 
+/*
+void Continent::addContinents(const vector<Continent> &v){
+    for (int i = 0; i < v.size(); i++){
+        Map::addContinent(v[i]);
+    }
+}*/
+
+vector<Territory> Territory::extractTerritories(const vector<string> &v) {
+    cout << "\nextraction territories\n";
+    vector<Territory> territories;
+    bool flag;
+    string first;
+    string item;
+
+    int id;
+    std::string name;
+    int contId;
+    int x;
+    int y;
+    for (int i = 0; i < v.size(); i++){
+        std::stringstream line;
+        line << v[i];
+        line >> first;
+        //if (first.length() > 1 && first.at(0) == ';')
+        if (v[i].at(0) == ';' || v[i].at(0) == '\r' || v[i].at(0) == '\n')
+            continue;
+        if (flag && first == "[borders]")
+            break;
+        if (flag) {
+            std::stringstream cc;
+            cc << v[i];
+            cc >> id;
+            cc >> name;
+            cc >> contId;
+            cc >> x;
+            cc >> y;
+            territories.push_back(Territory(id, name, contId, x, y));
+        }
+        if (first == "[countries]")
+            flag = true;
+    }
+    cout << territories.size() << " extracted\n";
+    //for (auto i : continents) { cout << i.color << " , ";}
+    return territories;
+}
+
+/*
+void Territory::addTerritories(const vector<Territory> &v){
+    for (int i = 0; i < v.size(); i++){
+        Map::addTerritory(v[i]);
+    }
+}
+*/
+
+void Territory::addBorders(const vector<string> &v, const vector<Territory> &vectorTerr) {
+    cout << "\nconnecting territories\n";
+    bool flag;
+    string first;
+    string item;
+
+    int id;
+    int idBorder;
+
+    for (int i = 0; i < v.size(); i++){
+        std::stringstream line;
+        line << v[i];
+        line >> first;
+        //if (first.length() > 1 && first.at(0) == ';')
+        if (v[i].at(0) == ';' || v[i].at(0) == '\r' || v[i].at(0) == '\n')
+            continue;
+        if (flag) {
+            std::stringstream cc;
+            cc << v[i];
+            cc >> id;
+
+            while (cc >> idBorder){
+                //Map::connectTerritories(id, idBorder);
+                //cout << id << " is connected to " << idBorder << " , ";
+            }
+            //cout << "\n";
+        }
+        if (first == "[borders]")
+            flag = true;
+    }
+}
+
+
 std::ostream& operator<<(std::ostream &strm, const Continent &a) {
     return strm << "[ " << a.id << " " << a.name << " " << a.size << " " << a.color << " ]";
+}
+
+std::ostream& operator<<(std::ostream &strm, const Territory &a) {
+    return strm << "[ " << a.id << " " << a.name << " " << a.contId << " " << a.x << " " << a.y  << " ]";
 }
 
 vector<string> split (const string &s, char delim) {
@@ -104,7 +208,7 @@ vector<string> split (const string &s, char delim) {
 int main( )
 {
     std::ifstream input;
-    input.open("europass.map");
+    input.open("solar.map");
     if (input.fail( ))
     {
         std::cout << "Input file opening failed.\n";
@@ -117,10 +221,19 @@ int main( )
         ss << s << "\n";
     }
 
-
     vector<string> v = split (ss.str(), '\n');
+
     vector<Continent> vectorCont = Continent::extractContinents(v);
     for (auto i : vectorCont) { cout << i << " \n";}
+
+    //addContinents(vectorCont);
+
+    vector<Territory> vectorTerr = Territory::extractTerritories(v);
+    for (auto i : vectorTerr) { cout << i << " \n";}
+
+    //addTerritories(vectorTerr);
+
+    Territory::addBorders(v, vectorTerr);
 
 
 
