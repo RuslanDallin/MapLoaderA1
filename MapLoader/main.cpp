@@ -253,14 +253,14 @@ std::vector<std::string> split (const std::string &s, char delim) {
     return result;
 }
 
-void validate (const std::vector<std::string> &v){
+bool validate (const std::vector<std::string> &v) {
     std::cout << "\nVerifing Map\n";
     bool continentsSwitch;
     bool countriesSwitch;
     bool bordersSwitch;
     std::string first;
 
-    for (int i = 0; i < v.size(); i++){
+    for (int i = 0; i < v.size(); i++) {
         std::stringstream line;
         line << v[i];
         line >> first;
@@ -273,12 +273,9 @@ void validate (const std::vector<std::string> &v){
         if (first == "[countries]")
             bordersSwitch = true;
     }
-    if (continentsSwitch && countriesSwitch && bordersSwitch) {
-        std:: cout << "Valid Map";
-    }
-    else{
-        std:: cout << "Invalid Map";
-    }
+    if (continentsSwitch && countriesSwitch && bordersSwitch)
+        return true;
+
 }
 
 
@@ -302,7 +299,9 @@ int main( )
     std::vector<std::string> v = split (ss.str(), '\n');
 
     std::cout << "Testing : " << mapMame;
-    validate(v);
+
+    if (validate(v))
+        std::cout << "Map Valid";
 
     std::vector<Continent> vectorCont = Continent::extractContinents(v);
     for (auto i : vectorCont) { std::cout << i << " \n";}
